@@ -1,0 +1,188 @@
+using System;
+
+namespace inost_dodekahedar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Opcije: ");
+            Console.WriteLine("1. Duzina stranice");
+            Console.WriteLine("2. Visina jedne stranice oktaedra");
+            Console.WriteLine("3. Povrsina");
+            Console.WriteLine("4. Zapremina");
+            Console.WriteLine("5. Poluprecnik opisane kruznice");
+            Console.WriteLine("6. Poluprecnik upisane kruznice");
+            Console.WriteLine("7. Osnovne informacije o dodekahedru");
+            Console.WriteLine("Koji od gore navedenih podataka zelite da unesete: ");
+            int unos_dodekahedar = Convert.ToInt32(Console.ReadLine());
+            if (unos_dodekahedar < 1 || unos_dodekahedar > 7)   // Ako se unese pogresan broj
+            {
+                while (unos_dodekahedar < 1 || unos_dodekahedar > 7)
+                {
+                    Console.WriteLine("Morate izabrati opcije izmedju 1 i 7!");
+                    unos_dodekahedar = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            if (unos_dodekahedar == 1)   // Racunanje preko stranice
+            {
+                Console.WriteLine("Izabrali ste opciju 1.(Unos stranice).\nUnesite duzinu stranice u centimetrima: ");
+                double a_dodekahedra = Convert.ToDouble(Console.ReadLine());
+
+                double h_dodekahedra = a_dodekahedra * 1.53884;
+                h_dodekahedra = Math.Round(h_dodekahedra, 2);
+                Console.WriteLine("Visina jedne stranice dodekahedra je: " + h_dodekahedra + " cm");
+
+                double p_dodekahedra = a_dodekahedra * a_dodekahedra * 20.64573;
+                p_dodekahedra = Math.Round(p_dodekahedra, 2);
+                Console.WriteLine("Povrsina dodekahedra je: " + p_dodekahedra + " cm²");
+
+                double v_dodekahedra = a_dodekahedra * a_dodekahedra * a_dodekahedra * 7.66312;
+                v_dodekahedra = Math.Round(v_dodekahedra, 2);
+                Console.WriteLine("Zapremina dodekahedra je: " + v_dodekahedra + " ml");
+
+                double poluprecnik_opisane_dodekahedar = a_dodekahedra * 0.968246;
+                poluprecnik_opisane_dodekahedar = Math.Round(poluprecnik_opisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere dodekahedra je: " + poluprecnik_opisane_dodekahedar + " cm");
+
+                double poluprecnik_upisane_dodekahedar = a_dodekahedra * 0.825168;
+                poluprecnik_upisane_dodekahedar = Math.Round(poluprecnik_upisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere dodekahedra je: " + poluprecnik_upisane_dodekahedar + " cm");
+            }
+            if (unos_dodekahedar == 2)  // Racunanje preko visine
+            {
+                Console.WriteLine("Izabrali ste opciju 2.(Unos stranice)\nUnesite visinu u centimetrima: ");
+                double h_dodekahedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_dodekahedra = h_dodekahedra / 1.53884;
+                a_dodekahedra = Math.Round(a_dodekahedra, 2);
+                Console.WriteLine("Duzina stranice dodekahedra je: " + a_dodekahedra + " cm");
+
+                double p_dodekahedra = a_dodekahedra * a_dodekahedra * 20.64573;
+                p_dodekahedra = Math.Round(p_dodekahedra, 2);
+                Console.WriteLine("Povrsina dodekahedra je: " + p_dodekahedra + " cm²");
+
+                double v_dodekahedra = a_dodekahedra * a_dodekahedra * a_dodekahedra * 7.66312;
+                v_dodekahedra = Math.Round(v_dodekahedra, 2);
+                Console.WriteLine("Zapremina dodekahedra je: " + v_dodekahedra + " ml");
+
+                double poluprecnik_opisane_dodekahedar = a_dodekahedra * 0.968246;
+                poluprecnik_opisane_dodekahedar = Math.Round(poluprecnik_opisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere dodekahedra je: " + poluprecnik_opisane_dodekahedar + " cm");
+
+                double poluprecnik_upisane_dodekahedar = a_dodekahedra * 0.825168;
+                poluprecnik_upisane_dodekahedar = Math.Round(poluprecnik_upisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere dodekahedra je: " + poluprecnik_upisane_dodekahedar + " cm");
+            }
+            if (unos_dodekahedar == 3)  // Racunanje preko povrsine
+            {
+                Console.WriteLine("Izabrali ste opciju 3.(Unos povrsine)\nUnesite povrsinu u cm²: ");
+                double p_dodekahedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_dodekahedra = p_dodekahedra / 20.64573;
+                a_dodekahedra = Math.Sqrt(a_dodekahedra);
+                a_dodekahedra = Math.Round(a_dodekahedra, 2);
+                Console.WriteLine("Duzina stranice je: " + a_dodekahedra + " cm");
+
+                double h_dodekahedra = a_dodekahedra * 1.53884;
+                h_dodekahedra = Math.Round(h_dodekahedra, 2);
+                Console.WriteLine("Visina jedne stranice dodekahedra je: " + h_dodekahedra + " cm");
+
+                double v_dodekahedra = a_dodekahedra * a_dodekahedra * a_dodekahedra * 7.66312;
+                v_dodekahedra = Math.Round(v_dodekahedra, 2);
+                Console.WriteLine("Zapremina dodekahedra je: " + v_dodekahedra + " ml");
+
+                double poluprecnik_opisane_dodekahedar = a_dodekahedra * 0.968246;
+                poluprecnik_opisane_dodekahedar = Math.Round(poluprecnik_opisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere dodekahedra je: " + poluprecnik_opisane_dodekahedar + " cm");
+
+                double poluprecnik_upisane_dodekahedar = a_dodekahedra * 0.825168;
+                poluprecnik_upisane_dodekahedar = Math.Round(poluprecnik_upisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere dodekahedra je: " + poluprecnik_upisane_dodekahedar + " cm");
+            }
+            if (unos_dodekahedar == 4)  // Racunanje preko zapremine
+            {
+                Console.WriteLine("Izabrali ste opciju 4.(Unos zapremine)\nUnesite zapreminu u ml (cm³): ");
+                double v_dodekahedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_dodekahedra = v_dodekahedra / 7.66312;
+                a_dodekahedra = Math.Cbrt(a_dodekahedra);
+                a_dodekahedra = Math.Round(a_dodekahedra, 2);
+                Console.WriteLine("Duzina stranice je: " + a_dodekahedra + " cm");
+
+                double h_dodekahedra = a_dodekahedra * 1.53884;
+                h_dodekahedra = Math.Round(h_dodekahedra, 2);
+                Console.WriteLine("Visina jedne stranice dodekahedra je: " + h_dodekahedra + " cm");
+
+                double p_dodekahedra = a_dodekahedra * a_dodekahedra * 20.64573;
+                p_dodekahedra = Math.Round(p_dodekahedra, 2);
+                Console.WriteLine("Povrsina dodekahedra je: " + p_dodekahedra + " cm²");
+
+                double poluprecnik_opisane_dodekahedar = a_dodekahedra * 0.968246;
+                poluprecnik_opisane_dodekahedar = Math.Round(poluprecnik_opisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere dodekahedra je: " + poluprecnik_opisane_dodekahedar + " cm");
+
+                double poluprecnik_upisane_dodekahedar = a_dodekahedra * 0.825168;
+                poluprecnik_upisane_dodekahedar = Math.Round(poluprecnik_upisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere dodekahedra je: " + poluprecnik_upisane_dodekahedar + " cm");
+            }
+            if (unos_dodekahedar == 5)
+            {
+                Console.WriteLine("Izabrali ste opciju 5.(Unos poluprecnika opisane sfere\nUnesite polprecnik opisan sfere: )");
+                double poluprecnik_opisane_dodekahedar = Convert.ToDouble(Console.ReadLine());
+
+                double a_dodekahedra = poluprecnik_opisane_dodekahedar / 0.968246;
+                a_dodekahedra = Math.Round(a_dodekahedra, 2);
+                Console.WriteLine("Duzina stranice je: " + a_dodekahedra + " cm");
+
+                double h_dodekahedra = a_dodekahedra * 1.53884;
+                h_dodekahedra = Math.Round(h_dodekahedra, 2);
+                Console.WriteLine("Visina jedne stranice dodekahedra je: " + h_dodekahedra + " cm");
+
+                double p_dodekahedra = a_dodekahedra * a_dodekahedra * 20.64573;
+                p_dodekahedra = Math.Round(p_dodekahedra, 2);
+                Console.WriteLine("Povrsina dodekahedra je: " + p_dodekahedra + " cm²");
+
+                double v_dodekahedra = a_dodekahedra * a_dodekahedra * a_dodekahedra * 7.66312;
+                v_dodekahedra = Math.Round(v_dodekahedra, 2);
+                Console.WriteLine("Zapremina dodekahedra je: " + v_dodekahedra + " ml");
+
+                double poluprecnik_upisane_dodekahedar = a_dodekahedra * 0.825168;
+                poluprecnik_upisane_dodekahedar = Math.Round(poluprecnik_upisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere dodekahedra je: " + poluprecnik_upisane_dodekahedar + " cm");
+            }
+            if (unos_dodekahedar == 6)
+            {
+                Console.WriteLine("Izabrali ste opciju 6.(Unos poluprecnika upisane sfere)\nUnesite poluprecnik upisane sfere: ");
+                double pouprecnik_upisane_dodekahedar = Convert.ToDouble(Console.ReadLine());
+
+                double a_dodekahedra = pouprecnik_upisane_dodekahedar / 0.825168;
+                a_dodekahedra = Math.Round(a_dodekahedra, 2);
+                Console.WriteLine("Duzina stranice je: " + a_dodekahedra + " cm");
+
+                double h_dodekahedra = a_dodekahedra * 1.53884;
+                h_dodekahedra = Math.Round(h_dodekahedra, 2);
+                Console.WriteLine("Visina jedne stranice dodekahedra je: " + h_dodekahedra + " cm");
+
+                double p_dodekahedra = a_dodekahedra * a_dodekahedra * 20.64573;
+                p_dodekahedra = Math.Round(p_dodekahedra, 2);
+                Console.WriteLine("Povrsina dodekahedra je: " + p_dodekahedra + " cm²");
+
+                double v_dodekahedra = a_dodekahedra * a_dodekahedra * a_dodekahedra * 7.66312;
+                v_dodekahedra = Math.Round(v_dodekahedra, 2);
+                Console.WriteLine("Zapremina dodekahedra je: " + v_dodekahedra + " ml");
+
+                double poluprecnik_opisane_dodekahedar = a_dodekahedra * 0.968246;
+                poluprecnik_opisane_dodekahedar = Math.Round(poluprecnik_opisane_dodekahedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere dodekahedra je: " + poluprecnik_opisane_dodekahedar + " cm");
+            }
+            if (unos_dodekahedar == 7)
+            {
+                Console.WriteLine("Dodekahedar je jedno od 5 Platonovih tijela.");
+                Console.WriteLine("Sastoji se iz 812 jednakostranicnih petouglova.");
+                Console.WriteLine("Dodekahedar ima 30 stranica koje su iste duzine.");
+                Console.WriteLine("Dodekahedar takodje ima 20 vrhova.");
+            }
+        }
+    }
+}
