@@ -1,0 +1,188 @@
+using System;
+
+namespace inost_ikosahedar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Opcije: ");
+            Console.WriteLine("1. Duzina stranice");
+            Console.WriteLine("2. Visina jedne strance oktaedra");
+            Console.WriteLine("3. Povrsina");
+            Console.WriteLine("4. Zapremina");
+            Console.WriteLine("5. Poluprecnik opisane kruznice");
+            Console.WriteLine("6. Poluprecnik upisane kruznice");
+            Console.WriteLine("7. Osnovne informacije o oktaedru");
+            Console.WriteLine("Koji od gore navedenih podataka zelite da unesete: ");
+            int unos_ikosahedar = Convert.ToInt32(Console.ReadLine());
+            if (unos_ikosahedar < 1 || unos_ikosahedar > 7)   // Ako se unese pogresan broj
+            {
+                while (unos_ikosahedar < 1 || unos_ikosahedar > 7)
+                {
+                    Console.WriteLine("Morate izabrati opcije izmedju 1 i 7!");
+                    unos_ikosahedar = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            if (unos_ikosahedar == 1)   // Racunanje preko stranice
+            {
+                Console.WriteLine("Izabrali ste opciju 1. (Unos stranice)\nUnesite duzinu stranice u centimetrima: ");
+                double a_ikosahedra = Convert.ToDouble(Console.ReadLine());
+
+                double h_ikosahedra = a_ikosahedra * 0.866025;
+                h_ikosahedra = Math.Round(h_ikosahedra, 2);
+                Console.WriteLine("Visina jedne strane ikosahedra je: " + h_ikosahedra + " cm");
+
+                double p_ikosahedra = a_ikosahedra * a_ikosahedra * 8.66025;
+                p_ikosahedra = Math.Round(p_ikosahedra, 2);
+                Console.WriteLine("Povrsina ikosahedra je: " + p_ikosahedra + " cm²");
+
+                double v_ikosahedra = a_ikosahedra * a_ikosahedra * a_ikosahedra * 2.18169;
+                v_ikosahedra = Math.Round(v_ikosahedra, 2);
+                Console.WriteLine("Zapremina ikosahedra je: " + v_ikosahedra + " ml");
+
+                double poluprecnik_opisane_ikosahedra = a_ikosahedra * 0.951057;
+                poluprecnik_opisane_ikosahedra = Math.Round(poluprecnik_opisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice ikosahedra je: " + poluprecnik_opisane_ikosahedra + " cm");
+
+                double poluprecnik_upisane_ikosahedra = a_ikosahedra * 0.755761;
+                poluprecnik_upisane_ikosahedra = Math.Round(poluprecnik_upisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice ikosahedra je: " + poluprecnik_upisane_ikosahedra + " cm");
+            }
+            if (unos_ikosahedar == 2)   // Racunanje preko visine
+            {
+                Console.WriteLine("Izabrali ste opciju 2. (Unos visine)\nUnesite visinu jedne stranice ikosahedra u centimetrima: ");
+                double h_ikosahedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_ikosahedra = h_ikosahedra / 8.66025;
+                a_ikosahedra = Math.Round(a_ikosahedra, 2);
+                Console.WriteLine("Duzina stranice ikosahedra je: " + a_ikosahedra + " cm");
+
+                double p_ikosahedra = a_ikosahedra * a_ikosahedra * 8.66025;
+                p_ikosahedra = Math.Round(p_ikosahedra, 2);
+                Console.WriteLine("Povrsina ikosahedra je: " + p_ikosahedra + " cm²");
+
+                double v_ikosahedra = a_ikosahedra * a_ikosahedra * a_ikosahedra * 2.18169;
+                v_ikosahedra = Math.Round(v_ikosahedra, 2);
+                Console.WriteLine("Zapremina ikosahedra je: " + v_ikosahedra + " ml");
+
+                double poluprecnik_opisane_ikosahedra = a_ikosahedra * 0.951057;
+                poluprecnik_opisane_ikosahedra = Math.Round(poluprecnik_opisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice ikosahedra je: " + poluprecnik_opisane_ikosahedra + " cm");
+
+                double poluprecnik_upisane_ikosahedra = a_ikosahedra * 0.755761;
+                poluprecnik_upisane_ikosahedra = Math.Round(poluprecnik_upisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice ikosahedra je: " + poluprecnik_upisane_ikosahedra + " cm");
+            }
+            if (unos_ikosahedar == 3)   // Racunanje preko povrsine
+            {
+                Console.WriteLine("Izabrali ste opciju 3. (Unos povrsince ikosahedra)\nUnesite povrsinu ikosahedra u cm²");
+                double p_ikosahedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_ikosahedra = p_ikosahedra / 8.66025;
+                a_ikosahedra = Math.Sqrt(a_ikosahedra);
+                a_ikosahedra = Math.Round(a_ikosahedra, 2);
+                Console.WriteLine("Duzina jedne stranice ikosahedra je: " + a_ikosahedra + " cm");
+
+                double h_ikosahedra = a_ikosahedra * 0.866025;
+                h_ikosahedra = Math.Round(h_ikosahedra, 2);
+                Console.WriteLine("Visina jedne strane ikosahedra je: " + h_ikosahedra + " cm");
+
+                double v_ikosahedra = a_ikosahedra * a_ikosahedra * a_ikosahedra * 2.18169;
+                v_ikosahedra = Math.Round(v_ikosahedra, 2);
+                Console.WriteLine("Zapremina ikosahedra je: " + v_ikosahedra + " ml");
+
+                double poluprecnik_opisane_ikosahedra = a_ikosahedra * 0.951057;
+                poluprecnik_opisane_ikosahedra = Math.Round(poluprecnik_opisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice ikosahedra je: " + poluprecnik_opisane_ikosahedra + " cm");
+
+                double poluprecnik_upisane_ikosahedra = a_ikosahedra * 0.755761;
+                poluprecnik_upisane_ikosahedra = Math.Round(poluprecnik_upisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice ikosahedra je: " + poluprecnik_upisane_ikosahedra + " cm");
+            }
+            if (unos_ikosahedar == 4)   // Racunanje preko zapremine
+            {
+                Console.WriteLine("Izabrali ste opciju 4. (Unos zapramine)\nUnesite zapreminu u ml (cm³)");
+                double v_ikosahedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_ikosahedra = v_ikosahedra / 2.18169;
+                a_ikosahedra = Math.Cbrt(a_ikosahedra);
+                a_ikosahedra = Math.Round(a_ikosahedra, 2);
+                Console.WriteLine("Duzina jedne stranice ikosahedra je: " + a_ikosahedra + " cm");
+
+                double h_ikosahedra = a_ikosahedra * 0.866025;
+                h_ikosahedra = Math.Round(h_ikosahedra, 2);
+                Console.WriteLine("Visina jedne strane ikosahedra je: " + h_ikosahedra + " cm");
+
+                double p_ikosahedra = a_ikosahedra * a_ikosahedra * 8.66025;
+                p_ikosahedra = Math.Round(p_ikosahedra, 2);
+                Console.WriteLine("Povrsina ikosahedra je: " + p_ikosahedra + " cm²");
+
+                double poluprecnik_opisane_ikosahedra = a_ikosahedra * 0.951057;
+                poluprecnik_opisane_ikosahedra = Math.Round(poluprecnik_opisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice ikosahedra je: " + poluprecnik_opisane_ikosahedra + " cm");
+
+                double poluprecnik_upisane_ikosahedra = a_ikosahedra * 0.755761;
+                poluprecnik_upisane_ikosahedra = Math.Round(poluprecnik_upisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice ikosahedra je: " + poluprecnik_upisane_ikosahedra + " cm");
+            }
+            if (unos_ikosahedar == 5)   // Racunanje preko poluprecnika opisane kruznice
+            {
+                Console.WriteLine("Izabrali ste opciju 5. (Unos poluprecnika opisane sfere)\nUnesite poluprecnik opisane sfere ikosahedra u centimetrima: ");
+                double poluprecnik_opisane_ikosahedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_ikosahedra = poluprecnik_opisane_ikosahedra / 0.951057;
+                a_ikosahedra = Math.Round(a_ikosahedra, 2);
+                Console.WriteLine("Duzina jedne stranice ikosahedra je: " + a_ikosahedra + " cm");
+
+                double h_ikosahedra = a_ikosahedra * 0.866025;
+                h_ikosahedra = Math.Round(h_ikosahedra, 2);
+                Console.WriteLine("Visina jedne strane ikosahedra je: " + h_ikosahedra + " cm");
+
+                double p_ikosahedra = a_ikosahedra * a_ikosahedra * 8.66025;
+                p_ikosahedra = Math.Round(p_ikosahedra, 2);
+                Console.WriteLine("Povrsina ikosahedra je: " + p_ikosahedra + " cm²");
+
+                double v_ikosahedra = a_ikosahedra * a_ikosahedra * a_ikosahedra * 2.18169;
+                v_ikosahedra = Math.Round(v_ikosahedra, 2);
+                Console.WriteLine("Zapremina ikosahedra je: " + v_ikosahedra + " ml");
+
+                double poluprecnik_upisane_ikosahedra = a_ikosahedra * 0.755761;
+                poluprecnik_upisane_ikosahedra = Math.Round(poluprecnik_upisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice ikosahedra je: " + poluprecnik_upisane_ikosahedra + " cm");
+            }
+            if (unos_ikosahedar == 6)
+            {
+                Console.WriteLine("Izabrali ste opciju 6. (Unos poluprecnika upisane sfere)\nUnesite poluprecnik upisane sfere ikosahedra u centimetrima: ");
+                double poluprecnik_upisane_ikosahedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_ikosahedra = poluprecnik_upisane_ikosahedra / 0.755761;
+                a_ikosahedra = Math.Round(a_ikosahedra, 2);
+                Console.WriteLine("Duzina jedne stranice ikosahedra je: " + a_ikosahedra + " cm");
+
+                double h_ikosahedra = a_ikosahedra * 0.866025;
+                h_ikosahedra = Math.Round(h_ikosahedra, 2);
+                Console.WriteLine("Visina jedne strane ikosahedra je: " + h_ikosahedra + " cm");
+
+                double p_ikosahedra = a_ikosahedra * a_ikosahedra * 8.66025;
+                p_ikosahedra = Math.Round(p_ikosahedra, 2);
+                Console.WriteLine("Povrsina ikosahedra je: " + p_ikosahedra + " cm²");
+
+                double v_ikosahedra = a_ikosahedra * a_ikosahedra * a_ikosahedra * 2.18169;
+                v_ikosahedra = Math.Round(v_ikosahedra, 2);
+                Console.WriteLine("Zapremina ikosahedra je: " + v_ikosahedra + " ml");
+
+                double poluprecnik_opisane_ikosahedra = a_ikosahedra * 0.951057;
+                poluprecnik_opisane_ikosahedra = Math.Round(poluprecnik_opisane_ikosahedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice ikosahedra je: " + poluprecnik_opisane_ikosahedra + " cm");
+            }
+            if (unos_ikosahedar == 7)
+            {
+                Console.WriteLine("Ikosahedar je jedno od 5 Platonovih tijela.");
+                Console.WriteLine("Sastoji se iz 20 jednakostranicnih trouglova.");
+                Console.WriteLine("Ikosahedar ima 30 stranica koje su iste duzine.");
+                Console.WriteLine("Ikosahedar takodje ima 12 vrhova.");
+            }
+        }
+    }
+}
