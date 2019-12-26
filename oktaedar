@@ -1,0 +1,188 @@
+using System;
+
+namespace inost_oktaedar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Opcije: ");
+            Console.WriteLine("1.Duzina stranice");
+            Console.WriteLine("2.Visina jedne strance oktaedra");
+            Console.WriteLine("3.Povrsina");
+            Console.WriteLine("4.Zapremina");
+            Console.WriteLine("5.Poluprecnik opisane kruznice");
+            Console.WriteLine("6.Poluprecnik upisane kruznice");
+            Console.WriteLine("7.Osnovne informacije o oktaedru");
+            Console.WriteLine("Koji od gore navedenih podataka zelite da unesete: ");
+            int unos_oktaedar = Convert.ToInt32(Console.ReadLine());
+            if (unos_oktaedar < 1 || unos_oktaedar > 7)   // Ako se unese pogresan broj
+            {
+                while (unos_oktaedar < 1 || unos_oktaedar > 7)
+                {
+                    Console.WriteLine("Morate izabrati opcije izmedju 1 i 7!");
+                    unos_oktaedar = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            if (unos_oktaedar == 1)  // Racunanje preko stranice
+            {
+                Console.WriteLine("Izabrali ste opciju 1.(Unos stranice).\nUnesite duzinu stranice u centimetrima: ");
+                double a_oktaedra = Convert.ToDouble(Console.ReadLine());
+
+                double h_oktaedra = a_oktaedra * 0.866025;
+                h_oktaedra = Math.Round(h_oktaedra, 2);
+                Console.WriteLine("Visina jedne strane oktaedra je: " + h_oktaedra + " cm");
+
+                double p_oktaedra = a_oktaedra * a_oktaedra * 3.4641;
+                p_oktaedra = Math.Round(p_oktaedra, 2);
+                Console.WriteLine("Povrsina oktaedra je: " + p_oktaedra + " cm²");
+
+                double v_oktaedra = a_oktaedra * a_oktaedra * a_oktaedra * 0.471405;
+                v_oktaedra = Math.Round(v_oktaedra, 2);
+                Console.WriteLine("Zapremina oktaedra je: " + v_oktaedra + " ml");
+
+                double poluprecnik_opisane_oktaedra = a_oktaedra * 0.707107;
+                poluprecnik_opisane_oktaedra = Math.Round(poluprecnik_opisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice oktaedra je: " + poluprecnik_opisane_oktaedra + " cm");
+
+                double poluprecnik_upisane_oktaedra = a_oktaedra * 0.408248;
+                poluprecnik_upisane_oktaedra = Math.Round(poluprecnik_upisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice oktaedra je: " + poluprecnik_upisane_oktaedra + " cm");
+            }
+            if (unos_oktaedar == 2)  // Racunanje preko visine
+            {
+                Console.WriteLine("Izabrali ste opciju 2.(Unos visine)\nUnesite duzinu visine strace oktaedra u centimetrima: ");
+                double h_oktaedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_oktaedra = h_oktaedra / 0.866025;
+                a_oktaedra = Math.Round(a_oktaedra, 2);
+                Console.WriteLine("Duzina stranice oktaedra je: " + a_oktaedra + " cm");
+
+                double p_oktaedra = a_oktaedra * a_oktaedra * 3.4641;
+                p_oktaedra = Math.Round(p_oktaedra, 2);
+                Console.WriteLine("Povrsina oktaedra je: " + p_oktaedra + " cm²");
+
+                double v_oktaedra = a_oktaedra * a_oktaedra * a_oktaedra * 0.471405;
+                v_oktaedra = Math.Round(v_oktaedra, 2);
+                Console.WriteLine("Zapremina oktaedra je: " + v_oktaedra + " ml");
+
+                double poluprecnik_opisane_oktaedra = a_oktaedra * 0.707107;
+                poluprecnik_opisane_oktaedra = Math.Round(poluprecnik_opisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice oktaedra je: " + poluprecnik_opisane_oktaedra + " cm");
+
+                double poluprecnik_upisane_oktaedra = a_oktaedra * 0.408248;
+                poluprecnik_upisane_oktaedra = Math.Round(poluprecnik_upisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice oktaedra je: " + poluprecnik_upisane_oktaedra + " cm");
+            }
+            if (unos_oktaedar == 3)  // Racunanje preko povrsine
+            {
+                Console.WriteLine("Izabrali ste opciju 3.(Unos povrsine)\nUnesite povrsinu u cm²: ");
+                double p_oktaedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_oktaedra = p_oktaedra / 3.4641;
+                a_oktaedra = Math.Sqrt(a_oktaedra);
+                a_oktaedra = Math.Round(a_oktaedra, 2);
+                Console.WriteLine("Duzina stranice oktaedra je: " + a_oktaedra + " cm");
+
+                double h_oktaedra = a_oktaedra * 0.866025;
+                h_oktaedra = Math.Round(h_oktaedra, 2);
+                Console.WriteLine("Visina jedne strane oktaedra je: " + h_oktaedra + " cm");
+
+                double v_oktaedra = a_oktaedra * a_oktaedra * a_oktaedra * 0.471405;
+                v_oktaedra = Math.Round(v_oktaedra, 2);
+                Console.WriteLine("Zapremina oktaedra je: " + v_oktaedra + " ml");
+
+                double poluprecnik_opisane_oktaedra = a_oktaedra * 0.707107;
+                poluprecnik_opisane_oktaedra = Math.Round(poluprecnik_opisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice oktaedra je: " + poluprecnik_opisane_oktaedra + " cm");
+
+                double poluprecnik_upisane_oktaedra = a_oktaedra * 0.408248;
+                poluprecnik_upisane_oktaedra = Math.Round(poluprecnik_upisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice oktaedra je: " + poluprecnik_upisane_oktaedra + " cm");
+            }
+            if (unos_oktaedar == 4) // Racuanje preko zapremine
+            {
+                Console.WriteLine("Izabrali ste opciju 4.(Unos zapremine)\nUnesite zapreminu u ml (cm³): ");
+                double v_oktaedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_oktaedra = v_oktaedra / 0.471405;
+                a_oktaedra = Math.Cbrt(a_oktaedra);
+                a_oktaedra = Math.Round(a_oktaedra, 2);
+                Console.WriteLine("Duzine stranice oktaedra je: " + a_oktaedra + "cm");
+
+                double h_oktaedra = a_oktaedra * 0.866025;
+                h_oktaedra = Math.Round(h_oktaedra, 2);
+                Console.WriteLine("Visina jedne strane oktaedra je: " + h_oktaedra + " cm");
+
+                double p_oktaedra = a_oktaedra * a_oktaedra * 3.4641;
+                p_oktaedra = Math.Round(p_oktaedra, 2);
+                Console.WriteLine("Povrsina oktaedra je: " + p_oktaedra + " cm²");
+
+                double poluprecnik_opisane_oktaedra = a_oktaedra * 0.707107;
+                poluprecnik_opisane_oktaedra = Math.Round(poluprecnik_opisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice oktaedra je: " + poluprecnik_opisane_oktaedra + " cm");
+
+                double poluprecnik_upisane_oktaedra = a_oktaedra * 0.408248;
+                poluprecnik_upisane_oktaedra = Math.Round(poluprecnik_upisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice oktaedra je: " + poluprecnik_upisane_oktaedra + " cm");
+            }
+            if (unos_oktaedar == 5) // Racunanje preko poluprecnika opisane kruznice
+            {
+                Console.WriteLine("Izabrali ste opciju 5.(Unos poluprecnika opisane kruznice)\nUnesite poluprecnik opisane kruznice u cm: ");
+                double poluprecnik_opisane_oktaedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_oktaedra = poluprecnik_opisane_oktaedra / 0.707107;
+                a_oktaedra = Math.Round(a_oktaedra, 2);
+                Console.WriteLine("Duzine stranice oktaedra je: " + a_oktaedra + "cm");
+
+                double h_oktaedra = a_oktaedra * 0.866025;
+                h_oktaedra = Math.Round(h_oktaedra, 2);
+                Console.WriteLine("Visina jedne strane oktaedra je: " + h_oktaedra + " cm");
+
+                double p_oktaedra = a_oktaedra * a_oktaedra * 3.4641;
+                p_oktaedra = Math.Round(p_oktaedra, 2);
+                Console.WriteLine("Povrsina oktaedra je: " + p_oktaedra + " cm²");
+
+                double v_oktaedra = a_oktaedra * a_oktaedra * a_oktaedra * 0.471405;
+                v_oktaedra = Math.Round(v_oktaedra, 2);
+                Console.WriteLine("Zapremina oktaedra je: " + v_oktaedra + " ml");
+
+                double poluprecnik_upisane_oktaedra = a_oktaedra * 0.408248;
+                poluprecnik_upisane_oktaedra = Math.Round(poluprecnik_upisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik upisane kruznice oktaedra je: " + poluprecnik_upisane_oktaedra + " cm");
+            }
+            if (unos_oktaedar == 6) // Racunanje preko poluprecnika upisane kruznice
+            {
+                Console.WriteLine("Izabrali ste opciju 6.(Unos poluprecnika upisane kruznice)\nUnesite diznu poluprecnika upisane kruznice u cm: ");
+                double poluprecnik_upisane_oktaedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_oktaedra = poluprecnik_upisane_oktaedra / 0.408248;
+                a_oktaedra = Math.Round(a_oktaedra, 2);
+                Console.WriteLine("Duzine stranice oktaedra je: " + a_oktaedra + "cm");
+
+                double h_oktaedra = a_oktaedra * 0.866025;
+                h_oktaedra = Math.Round(h_oktaedra, 2);
+                Console.WriteLine("Visina jedne strane oktaedra je: " + h_oktaedra + " cm");
+
+                double p_oktaedra = a_oktaedra * a_oktaedra * 3.4641;
+                p_oktaedra = Math.Round(p_oktaedra, 2);
+                Console.WriteLine("Povrsina oktaedra je: " + p_oktaedra + " cm²");
+
+                double v_oktaedra = a_oktaedra * a_oktaedra * a_oktaedra * 0.471405;
+                v_oktaedra = Math.Round(v_oktaedra, 2);
+                Console.WriteLine("Zapremina oktaedra je: " + v_oktaedra + " ml");
+
+                double poluprecnik_opisane_oktaedra = a_oktaedra * 0.707107;
+                poluprecnik_opisane_oktaedra = Math.Round(poluprecnik_opisane_oktaedra, 2);
+                Console.WriteLine("Poluprecnik opisane kruznice oktaedra je: " + poluprecnik_opisane_oktaedra + " cm");
+            }
+            if (unos_oktaedar == 7)  // Informacije o oktaedru
+            {
+                Console.WriteLine("Oktaedar je jedno od 5 Platonovih tijela.");
+                Console.WriteLine("Sastoji se iz 8 jednakostranicnih trouglova.");
+                Console.WriteLine("Oktaedar ima 12 stranica koje su iste duzine.");
+                Console.WriteLine("Oktaedar takodje ima 6 vrhova.");
+            }
+        }
+    }
+}
