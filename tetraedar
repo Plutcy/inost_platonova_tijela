@@ -1,0 +1,188 @@
+using System;
+
+namespace inost_tetraedar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Opcije: ");
+            Console.WriteLine("1. Duzina stranice");
+            Console.WriteLine("2. Visina jedne stranice tetraedra");
+            Console.WriteLine("3. Povrsina");
+            Console.WriteLine("4. Zapremina");
+            Console.WriteLine("5. Poluprecnik opisane kruznice");
+            Console.WriteLine("6. Poluprecnik upisane kruznice");
+            Console.WriteLine("7. Osnovne informacije o tetraedru");
+            Console.WriteLine("Koji od gore navedenih podataka zelite da unesete: ");
+            int unos_tetraedar = Convert.ToInt32(Console.ReadLine());
+            if (unos_tetraedar < 1 || unos_tetraedar > 7)   // Ako se unese pogresan broj
+            {
+                while (unos_tetraedar < 1 || unos_tetraedar > 7)
+                {
+                    Console.WriteLine("Morate izabrati opcije izmedju 1 i 7!");
+                    unos_tetraedar = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            if (unos_tetraedar == 1)   // Racunanje preko stranice
+            {
+                Console.WriteLine("Izabrali ste opciju 1.(Unos stranice).\nUnesite duzinu stranice u centimetrima: ");
+                double a_tetraedra = Convert.ToDouble(Console.ReadLine());
+
+                double h_tetraedra = a_tetraedra * 0.866025;
+                h_tetraedra = Math.Round(h_tetraedra, 2);
+                Console.WriteLine("Visina jedne stranice tetraedra je: " + h_tetraedra + " cm");
+
+                double p_tetraedra = a_tetraedra * a_tetraedra * 1.73205;
+                p_tetraedra = Math.Round(p_tetraedra, 2);
+                Console.WriteLine("Povrsina tetraedra je: " + p_tetraedra + " cm²");
+
+                double v_tetraedra = a_tetraedra * a_tetraedra * a_tetraedra * 0.117851;
+                v_tetraedra = Math.Round(v_tetraedra, 2);
+                Console.WriteLine("Zapremina tetraedra je: " + v_tetraedra + " ml");
+
+                double poluprecnik_opisane_tetraedar = a_tetraedra * 0.612372;
+                poluprecnik_opisane_tetraedar = Math.Round(poluprecnik_opisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere tetraedra je: " + poluprecnik_opisane_tetraedar + " cm");
+
+                double poluprecnik_upisane_tetraedar = a_tetraedra * 0.204124;
+                poluprecnik_upisane_tetraedar = Math.Round(poluprecnik_upisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere tetraedra je: " + poluprecnik_upisane_tetraedar + " cm");
+            }
+            if (unos_tetraedar == 2)  // Racunanje preko visine
+            {
+                Console.WriteLine("Izabrali ste opciju 2.(Unos stranice)\nUnesite visinu u centimetrima: ");
+                double h_tetraedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_tetraedra = h_tetraedra / 0.866025;
+                a_tetraedra = Math.Round(a_tetraedra, 2);
+                Console.WriteLine("Duzina stranice dodekahedra je: " + a_tetraedra + " cm");
+
+                double p_tetraedra = a_tetraedra * a_tetraedra * 1.73205;
+                p_tetraedra = Math.Round(p_tetraedra, 2);
+                Console.WriteLine("Povrsina tetraedra je: " + p_tetraedra + " cm²");
+
+                double v_tetraedra = a_tetraedra * a_tetraedra * a_tetraedra * 0.117851;
+                v_tetraedra = Math.Round(v_tetraedra, 2);
+                Console.WriteLine("Zapremina tetraedra je: " + v_tetraedra + " ml");
+
+                double poluprecnik_opisane_tetraedar = a_tetraedra * 0.612372;
+                poluprecnik_opisane_tetraedar = Math.Round(poluprecnik_opisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere tetraedra je: " + poluprecnik_opisane_tetraedar + " cm");
+
+                double poluprecnik_upisane_tetraedar = a_tetraedra * 0.204124;
+                poluprecnik_upisane_tetraedar = Math.Round(poluprecnik_upisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere tetraedra je: " + poluprecnik_upisane_tetraedar + " cm");
+            }
+            if (unos_tetraedar == 3)  // Racunanje preko povrsine
+            {
+                Console.WriteLine("Izabrali ste opciju 3.(Unos povrsine)\nUnesite povrsinu u cm²: ");
+                double p_tetraedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_tetraedra = p_tetraedra / 1.73205;
+                a_tetraedra = Math.Sqrt(a_tetraedra);
+                a_tetraedra = Math.Round(a_tetraedra, 2);
+                Console.WriteLine("Duzina stranice je: " + a_tetraedra + " cm");
+
+                double h_tetraedra = a_tetraedra * 0.866025;
+                h_tetraedra = Math.Round(h_tetraedra, 2);
+                Console.WriteLine("Visina jedne stranice tetraedra je: " + h_tetraedra + " cm");
+
+                double v_tetraedra = a_tetraedra * a_tetraedra * a_tetraedra * 0.117851;
+                v_tetraedra = Math.Round(v_tetraedra, 2);
+                Console.WriteLine("Zapremina tetraedra je: " + v_tetraedra + " ml");
+
+                double poluprecnik_opisane_tetraedar = a_tetraedra * 0.612372;
+                poluprecnik_opisane_tetraedar = Math.Round(poluprecnik_opisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere tetraedra je: " + poluprecnik_opisane_tetraedar + " cm");
+
+                double poluprecnik_upisane_tetraedar = a_tetraedra * 0.204124;
+                poluprecnik_upisane_tetraedar = Math.Round(poluprecnik_upisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere tetraedra je: " + poluprecnik_upisane_tetraedar + " cm");
+            }
+            if (unos_tetraedar == 4)  // Racunanje preko zapremine
+            {
+                Console.WriteLine("Izabrali ste opciju 4.(Unos zapremine)\nUnesite zapreminu u ml (cm³): ");
+                double v_tetraedra = Convert.ToDouble(Console.ReadLine());
+
+                double a_tetraedra = v_tetraedra / 0.117851;
+                a_tetraedra = Math.Cbrt(a_tetraedra);
+                a_tetraedra = Math.Round(a_tetraedra, 2);
+                Console.WriteLine("Duzina stranice je: " + a_tetraedra + " cm");
+
+                double h_tetraedra = a_tetraedra * 0.866025;
+                h_tetraedra = Math.Round(h_tetraedra, 2);
+                Console.WriteLine("Visina jedne stranice tetraedra je: " + h_tetraedra + " cm");
+
+                double p_tetraedra = a_tetraedra * a_tetraedra * 1.73205;
+                p_tetraedra = Math.Round(p_tetraedra, 2);
+                Console.WriteLine("Povrsina tetraedra je: " + p_tetraedra + " cm²");
+
+                double poluprecnik_opisane_tetraedar = a_tetraedra * 0.612372;
+                poluprecnik_opisane_tetraedar = Math.Round(poluprecnik_opisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere tetraedra je: " + poluprecnik_opisane_tetraedar + " cm");
+
+                double poluprecnik_upisane_tetraedar = a_tetraedra * 0.204124;
+                poluprecnik_upisane_tetraedar = Math.Round(poluprecnik_upisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere tetraedra je: " + poluprecnik_upisane_tetraedar + " cm");
+            }
+            if (unos_tetraedar == 5)
+            {
+                Console.WriteLine("Izabrali ste opciju 5.(Unos poluprecnika opisane sfere\nUnesite polprecnik opisan sfere: )");
+                double poluprecnik_opisane_tetraedar = Convert.ToDouble(Console.ReadLine());
+
+                double a_tetraedra = poluprecnik_opisane_tetraedar / 0.612372;
+                a_tetraedra = Math.Round(a_tetraedra, 2);
+                Console.WriteLine("Duzina stranice je: " + a_tetraedra + " cm");
+
+                double h_tetraedra = a_tetraedra * 0.866025;
+                h_tetraedra = Math.Round(h_tetraedra, 2);
+                Console.WriteLine("Visina jedne stranice tetraedra je: " + h_tetraedra + " cm");
+
+                double p_tetraedra = a_tetraedra * a_tetraedra * 1.73205;
+                p_tetraedra = Math.Round(p_tetraedra, 2);
+                Console.WriteLine("Povrsina tetraedra je: " + p_tetraedra + " cm²");
+
+                double v_tetraedra = a_tetraedra * a_tetraedra * a_tetraedra * 0.117851;
+                v_tetraedra = Math.Round(v_tetraedra, 2);
+                Console.WriteLine("Zapremina tetraedra je: " + v_tetraedra + " ml");
+
+                double poluprecnik_upisane_tetraedar = a_tetraedra * 0.204124;
+                poluprecnik_upisane_tetraedar = Math.Round(poluprecnik_upisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik upisane sfere tetraedra je: " + poluprecnik_upisane_tetraedar + " cm");
+            }
+            if (unos_tetraedar == 6)
+            {
+                Console.WriteLine("Izabrali ste opciju 6.(Unos poluprecnika upisane sfere)\nUnesite poluprecnik upisane sfere: ");
+                double poluprecnik_upisane_tetraedar = Convert.ToDouble(Console.ReadLine());
+
+                double a_tetraedra = poluprecnik_upisane_tetraedar / 0.204124;
+                a_tetraedra = Math.Round(a_tetraedra, 2);
+                Console.WriteLine("Duzina stranice je: " + a_tetraedra + " cm");
+
+                double h_tetraedra = a_tetraedra * 0.866025;
+                h_tetraedra = Math.Round(h_tetraedra, 2);
+                Console.WriteLine("Visina jedne stranice tetraedra je: " + h_tetraedra + " cm");
+
+                double p_tetraedra = a_tetraedra * a_tetraedra * 1.73205;
+                p_tetraedra = Math.Round(p_tetraedra, 2);
+                Console.WriteLine("Povrsina tetraedra je: " + p_tetraedra + " cm²");
+
+                double v_tetraedra = a_tetraedra * a_tetraedra * a_tetraedra * 0.117851;
+                v_tetraedra = Math.Round(v_tetraedra, 2);
+                Console.WriteLine("Zapremina tetraedra je: " + v_tetraedra + " ml");
+
+                double poluprecnik_opisane_tetraedar = a_tetraedra * 0.612372;
+                poluprecnik_opisane_tetraedar = Math.Round(poluprecnik_opisane_tetraedar, 2);
+                Console.WriteLine("Poluprecnik opisane sfere tetraedra je: " + poluprecnik_opisane_tetraedar + " cm");
+            }
+            if (unos_tetraedar == 7)
+            {
+                Console.WriteLine("Tetraedar je jedno od 5 Platonovih tijela.");
+                Console.WriteLine("Sastoji se iz 4 jednakostranicna trougla.");
+                Console.WriteLine("Tetraedar ima 6 stranica koje su iste duzine.");
+                Console.WriteLine("Tetraedar takodje ima 4 vrha.");
+            }
+        }
+    }
+}
