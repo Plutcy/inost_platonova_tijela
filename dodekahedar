@@ -179,7 +179,7 @@ namespace inost_dodekahedar
             if (unos_dodekahedar == 7)
             {
                 Console.WriteLine("Dodekahedar je jedno od 5 Platonovih tijela.");
-                Console.WriteLine("Sastoji se iz 812 jednakostranicnih petouglova.");
+                Console.WriteLine("Sastoji se iz 12 jednakostranicnih petouglova.");
                 Console.WriteLine("Dodekahedar ima 30 stranica koje su iste duzine.");
                 Console.WriteLine("Dodekahedar takodje ima 20 vrhova.");
             }
